@@ -13,44 +13,45 @@ const PORT = process.env.PORT || 3000;
 // ===============================================================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("public")); // serve static file from public directory
 
 // create a unique ID for each note
 // ===============================================================
-let userNotes = [];
+let allNotes = []; // array to hold all of the notes
 
-function createID(userNotes) {
-    userNotes = userNotes.map((value, i) => {
-        value.id = i + 1;
+// generates a unique ID for each note based on its index in the allNotes array
+function createID(allNotes) {
+    allNotes = allNotes.map((value, i) => {
+        value.id = i + 1; // 1 needs to be added, since ID cannot be 0
         return value;
     });
-    return userNotes;
+    return allNotes;
 };
 
 // get API route (and add a unique ID to the note)
 // ===============================================================
 app.get("/api/notes", (req, res) => {
-    userNotes = JSON.parse(fs.readFileSync("./db/db.json"));
-    userNotes = createID(userNotes);
-    return res.json(userNotes);
+    allNotes = JSON.parse(fs.readFileSync("./db/db.json"));
+    allNotes = createID(allNotes);
+    return res.json(allNotes);
 });
 
 // post API route
 // ===============================================================
 app.post("/api/notes", (req, res) => {
     var newNote = req.body;
-    newNote.id = userNotes.length + 1;
-    userNotes.push(newNote);
-    fs.writeFileSync("./db/db.json", JSON.stringify(userNotes));
+    newNote.id = allNotes.length + 1; // give an ID to new note
+    allNotes.push(newNote); // push new note to the array
+    fs.writeFileSync("./db/db.json", JSON.stringify(allNotes)); // write the new note
     res.end();
 });
 
 // delete API route (based on the note's ID)
 // ===============================================================
 app.delete("/api/notes/:id", (req, res) => {
-    userNotes.splice(req.params.id -1, 1);
-    userNotes = createID(userNotes);
-    fs.writeFileSync("./db/db.json", JSON.stringify(userNotes));
+    allNotes.splice(req.params.id - 1, 1); // remove the designated note
+    allNotes = createID(allNotes); // update the IDs in the notes array after removal
+    fs.writeFileSync("./db/db.json", JSON.stringify(allNotes)); // rewrite the notes after one has been deleted
     res.end();
 });
 
