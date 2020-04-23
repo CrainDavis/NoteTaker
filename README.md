@@ -166,7 +166,6 @@ https://www.contributor-covenant.org/translations.
     * [path](https://nodejs.org/docs/latest/api/path.html)
     * [FileSystem (fs)](https://www.npmjs.com/package/fs)
 * [Insomnia REST Client](https://insomnia.rest/)
-* [Bootstrap CSS](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 
 ---
 
