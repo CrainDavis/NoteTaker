@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This Note Taker application uses ExpressJS to allow the user to write notes that can be saved, viewed again at another time, and deleted when no longer needed. The application is useable with deployment through Heroku. See the [Usage Section](#usage) for the link to the deployed application.
+This Note Taker application allows the user to write notes that can be saved, viewed again at another time, and deleted when no longer needed. The application employs ExpressJS and is useable with deployment through Heroku. See the [Usage Section](#usage) for the link to the deployed application.
 
 
 ---
@@ -165,6 +165,7 @@ https://www.contributor-covenant.org/translations.
     * [ExpressJS](https://www.npmjs.com/package/express)
     * [path](https://nodejs.org/docs/latest/api/path.html)
     * [FileSystem (fs)](https://www.npmjs.com/package/fs)
+* [Insomnia REST Client](https://insomnia.rest/)
 * [Bootstrap CSS](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 
 ---

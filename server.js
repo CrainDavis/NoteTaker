@@ -31,9 +31,9 @@ function createID(allNotes) {
 // get API route (and add a unique ID to the note)
 // ===============================================================
 app.get("/api/notes", (req, res) => {
-    allNotes = JSON.parse(fs.readFileSync("./db/db.json"));
-    allNotes = createID(allNotes);
-    return res.json(allNotes);
+    allNotes = JSON.parse(fs.readFileSync("./db/db.json")); // get the array
+    allNotes = createID(allNotes); // assign IDs to each note in array
+    return res.json(allNotes); // return notes on the page
 });
 
 // post API route
@@ -42,7 +42,7 @@ app.post("/api/notes", (req, res) => {
     var newNote = req.body;
     newNote.id = allNotes.length + 1; // give an ID to new note
     allNotes.push(newNote); // push new note to the array
-    fs.writeFileSync("./db/db.json", JSON.stringify(allNotes)); // write the new note
+    fs.writeFileSync("./db/db.json", JSON.stringify(allNotes)); // write the new note to db.json
     res.end();
 });
 
@@ -58,11 +58,11 @@ app.delete("/api/notes/:id", (req, res) => {
 // get HTML routes ("index.html" and "notes.html")
 // ===============================================================
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/index.html"));
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
+    res.sendFile(path.join(__dirname, "public", "notes.html"));
 });
 
 // start server to begin listening
