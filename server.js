@@ -36,6 +36,18 @@ app.get("/api/notes", (req, res) => {
     return res.json(allNotes); // return notes on the page
 });
 
+// view JSON notes based on ID number
+app.get("/api/notes/:id", (req, res) => {
+    const noteId = Number(req.params.id);
+    const getNote = allNotes.find((note) => note.id === noteId);
+
+    if (!getNote) {
+        res.status(500).send("cannot find note")
+    } else {
+        res.json(getNote);
+    }
+});
+
 // post API route
 // ===============================================================
 app.post("/api/notes", (req, res) => {
