@@ -49,7 +49,7 @@ app.post("/api/notes", (req, res) => {
 // delete API route (based on the note's ID)
 // ===============================================================
 app.delete("/api/notes/:id", (req, res) => {
-    allNotes.splice(req.params.id - 1, 1); // remove the designated note
+    allNotes.splice(req.params.id - 1, 1); // remove the designated note from the allNotes array
     allNotes = createID(allNotes); // update the IDs in the notes array after removal
     fs.writeFileSync("./db/db.json", JSON.stringify(allNotes)); // rewrite the notes after one has been deleted
     res.end();
