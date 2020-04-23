@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This Note Taker application used ExpressJS to allow the user to write notes that can be saved, viewed again at another time, and deleted when no longer needed. The application is useable through Heroku.
+This Note Taker application uses ExpressJS to allow the user to write notes that can be saved, viewed again at another time, and deleted when no longer needed. The application is useable with deployment through Heroku. See the [Usage Section](#usage) for the link to the deployed application.
 
 
 ---
