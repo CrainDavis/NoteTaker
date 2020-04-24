@@ -27,11 +27,12 @@ No installation is required.
 ---
 
 ## Usage:
-Open the application in your browser through __[this link]()__.
+Open the application in your browser through __[this link](https://ancient-fortress-02120.herokuapp.com/)__.
 
 ---
 
 ## Demonstration:
+A demonstration of this application can be viewed through __[this link](https://drive.google.com/file/d/1HQCiM0PY94VFSIYLPM7IcSQZ9b7mvvnX/view?usp=sharing)__.
 
 ---
 
