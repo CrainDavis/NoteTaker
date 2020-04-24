@@ -165,6 +165,7 @@ https://www.contributor-covenant.org/translations.
     * [ExpressJS](https://www.npmjs.com/package/express)
     * [path](https://nodejs.org/docs/latest/api/path.html)
     * [FileSystem (fs)](https://www.npmjs.com/package/fs)
+    * [Universal Unique Identifier -- Version 4 (uuid/v4)](https://www.npmjs.com/package/uuid)
 * [Insomnia REST Client](https://insomnia.rest/)
 
 ---
