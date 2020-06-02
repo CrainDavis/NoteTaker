@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This Note Taker application allows the user to write notes that can be saved, viewed again at another time, and deleted when no longer needed. The application employs ExpressJS and is useable with deployment through Heroku. See the [Usage Section](#usage) for the link to the deployed application.
+This Note Taker application allows the user to write notes that can be saved, viewed again at another time, and deleted when no longer needed. The application employs NodeJS/Express and is useable with deployment through Heroku. See the [Usage Section](#usage) for the link to the deployed application.
 
 
 ---
@@ -16,7 +16,6 @@ This Note Taker application allows the user to write notes that can be saved, vi
 * [License](#license)
 * [Contributing](#contributing)
 * [Resources](#resources)
-* [Tests](#tests)
 * [Questions](#questions)
 
 ---
@@ -168,10 +167,6 @@ https://www.contributor-covenant.org/translations.
     * [FileSystem (fs)](https://www.npmjs.com/package/fs)
     * [Universal Unique Identifier -- Version 4 (uuid/v4)](https://www.npmjs.com/package/uuid)
 * [Insomnia REST Client](https://insomnia.rest/)
-
----
-
-## Tests:
 
 ---
 
